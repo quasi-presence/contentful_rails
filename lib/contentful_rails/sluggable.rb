@@ -5,7 +5,7 @@ module ContentfulRails
     # NOTE that if you include sluggable (and define a slug field) in a class which responds to
     # slug() than you'll get a stack level too deep error.
 
-    class_methods do
+    included do
       attr_accessor :slug_field
     end
 
