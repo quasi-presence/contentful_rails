@@ -3,8 +3,8 @@ module ContentfulRails
     extend ActiveSupport::Concern
 
     included do
-      before_action :check_preview_domain
-      after_action :remove_preview_cache
+      before_filter :check_preview_domain
+      after_filter :remove_preview_cache
       helper_method :preview?
     end
     # Check whether the subdomain being presented is the preview domain.
